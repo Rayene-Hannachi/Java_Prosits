@@ -81,36 +81,27 @@ public class Zoo {
     public int getAnimalnum() {
         return animalnum;
     }
-
     public void setAnimalnum(int animalnum) {
         this.animalnum = animalnum;
     }
-
     public int getNBR_CAGES() {
         return NBR_CAGES;
     }
-
-
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public void setAnimals(Animal[] animals) {
         this.animals = animals;
     }
-
     public Animal[] getAnimals() {
         return animals;
     }
