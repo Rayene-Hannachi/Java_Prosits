@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         ZooManagment zoo = new ZooManagment();
         Scanner name = new Scanner(System.in);
