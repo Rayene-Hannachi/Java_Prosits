@@ -35,7 +35,7 @@ public class ZooManagment {
                 System.out.println("Zoo2 contient plus animal que myZoo1");
             }
             else if(myZoo2.compareZoo(myZoo2, myZoo1)==myZoo1){
-                System.out.println("Zoo1 not contient plus animal que myZoo2");
+                System.out.println("Zoo1 contient plus animal que myZoo2");
             }
             else {
                 System.out.println("les 2 zoo contient le meme nbr d'animaux");
