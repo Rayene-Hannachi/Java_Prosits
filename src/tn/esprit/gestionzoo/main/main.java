@@ -1,6 +1,11 @@
+package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.Zoo;
+
 public class main {
         public static void main(String[] args) {
-            Zoo myZoo1 = new Zoo("myzoo","tunis",0);
+
+            Zoo myZoo1 = new Zoo("zoo1","tn",0);
             Animal lion = new Animal("Félins", "Simba", 6, true);
             Animal tiger = new Animal("Félins", "Tigger", 5, true);
             Animal cat = new Animal("Félins", "gato", 15, true);
@@ -57,9 +62,9 @@ public class main {
             zoo.setNbrCages(sc.nextInt());
             sc.nextLine();
         }while((zoo.getNbrCages()<0)||(zoo.getNbrCages()>25));
-        Animal[] animals = new Animal[zoo.getNbrCages()];
+        tn.esprit.gestionzoo.entities.Animal[] animals = new tn.esprit.gestionzoo.entities.Animal[zoo.getNbrCages()];
         for(int i=0;i<zoo.getNbrCages();i++){
-            Animal animal = new Animal();
+            tn.esprit.gestionzoo.entities.Animal animal = new tn.esprit.gestionzoo.entities.Animal();
             System.out.println("animal name:");
             animal.setName(sc.nextLine());
             System.out.println("animal family:");

@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Animal {
     private String family;
     private String name;
@@ -26,7 +28,10 @@ public class Animal {
         return age;
     }
     public void setAge(int age) {
-        this.age = age;
+        if(age >0)
+            this.age = age;
+        else
+            System.out.println("Invalid Age");
     }
     public boolean isMammal() {
         return isMammal;
