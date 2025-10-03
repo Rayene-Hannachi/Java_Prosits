@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Main {
+public class main {
         public static void main(String[] args) {
             Zoo myZoo1 = new Zoo("myzoo","tunis",0);
             Animal lion = new Animal("Félins", "Simba", 6, true);
