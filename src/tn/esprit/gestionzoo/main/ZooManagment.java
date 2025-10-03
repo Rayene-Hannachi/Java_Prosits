@@ -2,7 +2,7 @@ package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
 
-public class main {
+public class ZooManagment {
         public static void main(String[] args) {
 
             Zoo myZoo1 = new Zoo("zoo1","tn",0);
