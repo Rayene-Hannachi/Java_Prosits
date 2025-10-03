@@ -31,7 +31,7 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal animal){
-        if((animalnum < NBR_CAGES)&&(searchAnimal(animal)==-1)){
+        if(isZooFull()&&(searchAnimal(animal)==-1)){
             animals[animalnum] = animal;
             animalnum++;
             System.out.println("Animal added to the Zoo");
