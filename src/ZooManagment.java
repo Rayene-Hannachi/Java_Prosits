@@ -1,4 +1,4 @@
-public class main {
+public class ZooManagment {
         public static void main(String[] args) {
             Zoo myZoo1 = new Zoo("myzoo","tunis",0);
             Animal lion = new Animal("Félins", "Simba", 6, true);
