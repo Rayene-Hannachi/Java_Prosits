@@ -2,12 +2,43 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Zoo myZoo = new Zoo("myzoo","tunis",25);
-        Animal animal = new Animal("Félins","lion",5,true);
-        myZoo.animals[0] = animal;
-        //myZoo.displayZoo();
-        System.out.println(myZoo.toString());
-        System.out.println(animal.toString());
+        Zoo myZoo1 = new Zoo("myzoo","tunis",0);
+        Animal lion = new Animal("Félins", "Simba", 6, true);
+        Animal tiger = new Animal("Félins", "Tigger", 5, true);
+        Animal cat = new Animal("Félins", "gato", 15, true);
+
+        myZoo1.addAnimal(tiger);
+        myZoo1.addAnimal(lion);
+        myZoo1.addAnimal(cat);
+        System.out.println(myZoo1);
+        System.out.println("-------------------------------");
+        //myZoo1.removeAnimal(cat);
+        System.out.println(myZoo1);
+        System.out.println("-------------------------------");
+        if(myZoo1.searchAnimal(tiger)!=-1)
+            System.out.println("animal found");
+        else
+            System.out.println("animal not found");
+        System.out.println("-------------------------------");
+        Zoo myZoo2 = new Zoo("myzoo2","tunis",0);
+        Animal lion2 = new Animal("Félins", "Simba2", 6, true);
+        Animal tiger2 = new Animal("Félins", "Tigger2", 5, true);
+        Animal cat2 = new Animal("Félins", "gato2", 15, true);
+
+        myZoo2.addAnimal(tiger2);
+        myZoo2.addAnimal(lion2);
+        //myZoo2.addAnimal(cat2);
+        if(myZoo2.compareZoo(myZoo2, myZoo1)==myZoo2){
+            System.out.println("Zoo2 contient plus animal que myZoo1");
+        }
+        else if(myZoo2.compareZoo(myZoo2, myZoo1)==myZoo1){
+            System.out.println("Zoo1 not contient plus animal que myZoo2");
+        }
+        else {
+            System.out.println("les 2 zoo contient le meme nbr d'animaux");
+        }
+
+
 
 
 
