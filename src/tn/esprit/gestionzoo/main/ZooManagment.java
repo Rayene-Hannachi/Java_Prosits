@@ -1,6 +1,5 @@
 package tn.esprit.gestionzoo.main;
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class ZooManagment {
         public static void main(String[] args) {
@@ -40,8 +39,16 @@ public class ZooManagment {
                 System.out.println("les 2 zoo contient le meme nbr d'animaux");
             }
 
-
-
+            System.out.println("----------------------------------");
+            Penguin penguin = new Penguin("Bird","Panguino",2,false,"water",25);
+            Dolphin dolphin = new Dolphin("Delphinidae","dalphone",6,true,"water",30);
+            Aquatic aquatic = new Aquatic("","",0,false,"water");
+            System.out.println(penguin.toString());
+            System.out.println(dolphin.toString());
+            System.out.println(aquatic.toString());
+            penguin.swim();
+            dolphin.swim();
+            aquatic.swim();
 
 
 
