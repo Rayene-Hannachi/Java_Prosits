@@ -42,10 +42,10 @@ public class ZooManagment {
             System.out.println("----------------------------------");
             Penguin penguin = new Penguin("Bird","Panguino",2,false,"water",25);
             Dolphin dolphin = new Dolphin("Delphinidae","dalphone",6,true,"water",30);
-            Aquatic aquatic = new Aquatic("","",0,false,"water");
-            System.out.println(penguin.toString());
-            System.out.println(dolphin.toString());
-            System.out.println(aquatic.toString());
+            Aquatic aquatic = new Aquatic("","",0,false,"");
+            System.out.println(penguin);
+            System.out.println(dolphin);
+            System.out.println(aquatic);
             penguin.swim();
             dolphin.swim();
             aquatic.swim();
@@ -53,37 +53,6 @@ public class ZooManagment {
 
 
 
-/*
-        Scanner sc = new Scanner(System.in);
-        do {
-            System.out.println("Enter zoo name");
-            zoo.setName(sc.nextLine());
-        }while(zoo.getName().trim().isEmpty());
-        do {
-            System.out.println("Enter city name");
-            zoo.setCity(sc.nextLine());
-        }while(zoo.getCity().trim().isEmpty());
-        do{
-            System.out.println("Enter nbrchages");
-            zoo.setNbrCages(sc.nextInt());
-            sc.nextLine();
-        }while((zoo.getNbrCages()<0)||(zoo.getNbrCages()>25));
-        tn.esprit.gestionzoo.entities.Animal[] animals = new tn.esprit.gestionzoo.entities.Animal[zoo.getNbrCages()];
-        for(int i=0;i<zoo.getNbrCages();i++){
-            tn.esprit.gestionzoo.entities.Animal animal = new tn.esprit.gestionzoo.entities.Animal();
-            System.out.println("animal name:");
-            animal.setName(sc.nextLine());
-            System.out.println("animal family:");
-            animal.setFamily(sc.nextLine());
-            System.out.println("animal age:");
-            animal.setAge(sc.nextInt());
-            sc.nextLine();
-            System.out.println("Mammal(true/false):");
-            animal.setMammal(sc.nextBoolean());
-            animals[i]=animal;
-        }
-        zoo.setAnimals(animals);
-*/
         }
 
 
