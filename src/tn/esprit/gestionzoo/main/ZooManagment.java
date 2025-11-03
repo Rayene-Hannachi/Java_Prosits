@@ -42,13 +42,20 @@ public class ZooManagment {
             System.out.println("----------------------------------");
             Penguin penguin = new Penguin("Bird","Panguino",2,false,"water",25);
             Dolphin dolphin = new Dolphin("Delphinidae","dalphone",6,true,"water",30);
-            Aquatic aquatic = new Aquatic("","",0,false,"");
             System.out.println(penguin);
             System.out.println(dolphin);
-            System.out.println(aquatic);
             penguin.swim();
             dolphin.swim();
-            aquatic.swim();
+            System.out.println("--------------------------------------------");
+            myZoo1.addAquaticAnimal(penguin);
+            myZoo1.addAquaticAnimal(dolphin);
+            Aquatic[] Aqanimals = myZoo1.getAquaticAnimals();
+            for (Aquatic a : myZoo1.getAquaticAnimals()) {
+                if (a != null) {
+                    System.out.println(a);
+                    a.swim();
+                }
+            }
 
 
 
