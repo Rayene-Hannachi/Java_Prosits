@@ -4,7 +4,7 @@ public class Zoo {
     private Animal[] animals;
     private String name;
     private String city;
-    private static final int NBR_CAGES = 25;
+    private static final int NBR_CAGES = 3;
     private int animalnum;
     private Aquatic[] aquaticAnimals;
 
@@ -34,18 +34,15 @@ public class Zoo {
         return ("");
     }
 
-    public boolean addAnimal(Animal animal){
-        if(!isZooFull()&&(searchAnimal(animal)==-1)){
-            animals[animalnum] = animal;
-            animalnum++;
-            System.out.println("Animal added to the Zoo");
-            return (animals[(animalnum-1)] != null);
+    public void addAnimal(Animal animal) throws ZooFullException {
+        if (animalnum >= NBR_CAGES) {
+            throw new ZooFullException("The zoo is full!");
         }
-        else {
-            System.out.println("Animal could not be added to the Zoo");
-            return false;
-        }
+        animals[animalnum] = animal;
+        animalnum++;
+        System.out.println("Animal added to the Zoo");
     }
+
     public boolean removeAnimal(Animal animal){
         if(searchAnimal(animal)!=-1){
             for(int i=searchAnimal(animal);i<=animalnum;i++){
