@@ -1,8 +1,10 @@
 package tn.esprit.gestionzoo.entities;
 
-public class Terrestrial extends Animal{
+import tn.esprit.gestionzoo.Exceptions.InvalidAgeException;
+
+public class Terrestrial extends Animal implements Herbivore<Food>{
     protected int nbrLegs;
-    public Terrestrial(String family, String name, int age, boolean isMammal,int nbrLegs) throws InvalidAgeException{
+    public Terrestrial(String family, String name, int age, boolean isMammal,int nbrLegs) throws InvalidAgeException {
             super(family, name, age, isMammal);
             this.nbrLegs = nbrLegs;
 
@@ -14,5 +16,15 @@ public class Terrestrial extends Animal{
 
     public void setNbrLegs(int nbrLegs) {
         this.nbrLegs = nbrLegs;
+    }
+
+    @Override
+    public void eatPlant(Food plant) {
+        if(plant.equals(Food.PLANT)){
+            System.out.println("Eating plant");
+        }
+        else {
+            System.out.println("not Eating plant");
+        }
     }
 }

@@ -1,6 +1,7 @@
 package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.Exceptions.InvalidAgeException;
+import tn.esprit.gestionzoo.Exceptions.ZooFullException;
 import tn.esprit.gestionzoo.entities.*;
-
 public class ZooManagment {
         public static void main(String[] args) {
             Zoo myZoo1 = new Zoo("zoo1","tn",0);
@@ -80,6 +81,17 @@ public class ZooManagment {
                     a.swim();
                 }
             }
+            System.out.println("--------------------------------------------");
+            Terrestrial sid=null;
+            try {
+                sid = new Terrestrial("Félins", "Simba", 6, true, 4);
+            } catch (InvalidAgeException e) {
+                throw new RuntimeException(e);
+            }
+            Food F = null;
+            sid.eatPlant(F.PLANT);
+            dolphin.eatMeat(F.MEAT);
+            penguin.eatMeat(F.BOTH);
 
 
 
