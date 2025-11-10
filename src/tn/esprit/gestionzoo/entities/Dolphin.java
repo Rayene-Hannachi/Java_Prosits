@@ -8,6 +8,7 @@ public class Dolphin extends Aquatic {
         super(family, name, age, isMammal, habitat);
         this.swimmingSpeed = swimmingSpeed;
     }
+
     public float getSwimmingSpeed() {
         return swimmingSpeed;
     }

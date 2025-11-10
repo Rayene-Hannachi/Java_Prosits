@@ -89,7 +89,19 @@ public class ZooManagment {
                 throw new RuntimeException(e);
             }
             Food F = null;
+            Aquatic aquatic = null;
+            try {
+                aquatic = new Aquatic("","",0,false,"") {
+                    @Override
+                    public void swim() {
+                        System.out.println("swim");
+                    }
+                };
+            } catch (InvalidAgeException e) {
+                throw new RuntimeException(e);
+            }
             sid.eatPlant(F.PLANT);
+            aquatic.eatMeat(F.MEAT);
             dolphin.eatMeat(F.MEAT);
             penguin.eatMeat(F.BOTH);
 
