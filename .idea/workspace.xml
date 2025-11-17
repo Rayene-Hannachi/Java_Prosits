@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5b7ee5c-b4ec-462a-a337-f47a55eb6378" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DepartementHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IDepartement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/departement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +54,7 @@
     "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Prosit10",
     "kotlin-language-version-configured": "true",
@@ -84,11 +88,22 @@
       <workItem from="1762772766550" duration="30000" />
       <workItem from="1762779540424" duration="479000" />
       <workItem from="1762809652845" duration="1240000" />
-      <workItem from="1763366515449" duration="3495000" />
+      <workItem from="1763366515449" duration="5136000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
