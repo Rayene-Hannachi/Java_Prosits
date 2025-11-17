@@ -23,7 +23,7 @@ public class Employe implements Comparable<Employe>{
     }
     @Override
     public int compareTo(Employe e) {
-        return Integer.compare(this.id, e.id);
+        return this.id - e.id;
     }
 
 
