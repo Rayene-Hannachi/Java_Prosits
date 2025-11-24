@@ -1,4 +1,6 @@
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class DepartementHashSet implements IDepartement<departement> {
@@ -11,22 +13,28 @@ public class DepartementHashSet implements IDepartement<departement> {
 
     @Override
     public void ajouterDepartement(departement d) {
-        departements.add(d);
+        this.departements.add(d);
     }
 
     @Override
     public boolean rechercherDepartement(String nom) {
+
+        Iterator<departement> it = this.departements.iterator();
+        while (it.hasNext()) {
+            return(it.next().getNom().equals(nom));
+        }
+        /*
         for (departement d : departements) {
             if (d.getNom().equals(nom)) {
                 return true;
             }
-        }
+        }*/
         return false;
     }
 
     @Override
     public boolean rechercherDepartement(departement d) {
-        return departements.contains(d);
+        return this.departements.contains(d);
     }
 
     @Override
@@ -43,9 +51,13 @@ public class DepartementHashSet implements IDepartement<departement> {
 
     @Override
     public TreeSet<departement> trierDepartementById() {
-        TreeSet<departement> resultat =
-                new TreeSet<>((a, b) -> Integer.compare(a.getId(), b.getId()));
-        resultat.addAll(departements);
-        return resultat;
+        Comparator<departement> IdCreteria = new Comparator<departement>() {
+            @Override
+            public int compare(departement o1, departement o2) {
+                return o1.getId()-o2.getId();
+            }
+        };
+        TreeSet<departement> treeset = new TreeSet<>(IdCreteria);
+        return treeset;
     }
 }
