@@ -14,8 +14,8 @@ public class main {
         System.out.println("--------------------------------------");
         sa.trierEmployeParNomDépartementEtGrade();
         sa.displayEmploye();
-
-
+        System.out.println("-------------------------------------");
+        
     }
 
 }
