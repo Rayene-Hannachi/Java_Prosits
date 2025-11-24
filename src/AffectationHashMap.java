@@ -1,86 +1,91 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class AffectationHashMap {
 
 
-    private Map<Employe, departement> affectations;
+    private Map<Employe, departement> mapDnE;
 
 
     public AffectationHashMap() {
-        affectations = new HashMap<>();
+        mapDnE = new HashMap<>();
     }
 
 
     public void ajouterEmployeDepartement(Employe e, departement d) {
-        if (affectations.containsKey(e)) {
-            System.out.println("Attention : L'employé " + e.getNom() + " est déjà affecté au département "
-                    + affectations.get(e).getNom() + ". La nouvelle affectation remplacera l'ancienne.");
-        }
-        affectations.put(e, d);
+        mapDnE.put(e, d);
     }
 
 
     public void afficherEmployesEtDepartements() {
-        if (affectations.isEmpty()) {
-            System.out.println("Aucune affectation trouvée.");
-            return;
+        /*
+        //search by key
+        Set<Employe> employees = mapDnE.keySet();
+        for(Employe e: employees) {
+            System.out.println(e + " -> " + mapDnE.get(e));
         }
-        System.out.println("--- Employés et leurs départements ---");
-        for (Map.Entry<Employe, departement> entry : affectations.entrySet()) {
-            System.out.println(entry.getKey().getNom() + " -> " + entry.getValue().getNom());
+
+         */
+        //entry set
+        Set<Map.Entry<Employe, departement>> entrySet = this.mapDnE.entrySet();
+        for (Map.Entry<Employe, departement> entry : entrySet) {
+            System.out.println(entry.getKey().getNom()+ " -> " + entry.getValue().getNom());
         }
+
+
     }
 
 
     public void supprimerEmploye(Employe e) {
-        affectations.remove(e);
+        mapDnE.remove(e);
     }
 
 
     public void supprimerEmployeEtDepartement(Employe e, departement d) {
-        if (affectations.containsKey(e) && affectations.get(e).equals(d)) {
-            affectations.remove(e);
+        if (mapDnE.containsKey(e) && mapDnE.get(e).equals(d)) {
+            supprimerEmploye(e);
         } else {
             System.out.println("L'employé " + e.getNom() + " n'est pas affecté au département " + d.getNom());
         }
     }
 
     public void afficherEmployes() {
-        if (affectations.isEmpty()) {
+        if (mapDnE.isEmpty()) {
             System.out.println("Aucun employé trouvé.");
             return;
         }
         System.out.println("--- Liste des employés ---");
-        for (Employe e : affectations.keySet()) {
+        for (Employe e : mapDnE.keySet()) {
             System.out.println(e.getNom());
         }
     }
 
 
     public void afficherDepartements() {
-        if (affectations.isEmpty()) {
+        if (mapDnE.isEmpty()) {
             System.out.println("Aucun département trouvé.");
             return;
         }
         System.out.println("--- Liste des départements ---");
-        for (departement d : affectations.values()) {
+        for (departement d : mapDnE.values()) {
             System.out.println(d.getNom());
         }
     }
 
 
     public boolean rechercherEmploye(Employe e) {
-        return affectations.containsKey(e);
+        return mapDnE.containsKey(e);
     }
 
     public boolean rechercherDepartement(departement d) {
-        return affectations.containsValue(d);
+        return mapDnE.containsValue(d);
     }
 
 
     public TreeMap<Employe, departement> trierMap() {
-        return new TreeMap<>(affectations);
+        TreeMap<Employe, departement> sortedMap = new TreeMap<>(mapDnE);
+        return sortedMap;
     }
 }

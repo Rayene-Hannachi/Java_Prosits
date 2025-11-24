@@ -15,7 +15,14 @@ public class main {
         sa.trierEmployeParNomDépartementEtGrade();
         sa.displayEmploye();
         System.out.println("-------------------------------------");
-        
+        AffectationHashMap ahm = new AffectationHashMap();
+        Employe e=new Employe(7,"peepo","evil","autsim",6);
+        departement d=new departement(2,"autism",69);
+        ahm.ajouterEmployeDepartement(new Employe(1,"rayen","evil","doomer",2),new departement(1,"doomer",3));
+        ahm.ajouterEmployeDepartement(e,d);
+        ahm.afficherEmployesEtDepartements();
+        ahm.supprimerEmployeEtDepartement(e,d);
+        ahm.afficherEmployesEtDepartements();
     }
 
 }
